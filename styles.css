@@ -233,3 +233,49 @@
 .hero-photo-wrap .award-sticker{left:18px;bottom:18px}
 @media(min-width:901px){.hero-photo-wrap .award-sticker{left:20px;bottom:22px}}
 @media(max-width:650px){.hero-photo-wrap .award-sticker{left:12px;bottom:12px}}
+
+/* Mobile/tablet layout correction — keep section content inside the same centered gutter. */
+@media (max-width:900px){
+  .services-section .wrap.section-inner,
+  .reviews-section .wrap.section-inner,
+  .contact-section .wrap.section-inner{
+    width:min(calc(100% - 42px),760px);
+    max-width:760px;
+    margin-inline:auto;
+    min-width:0;
+  }
+  .services-layout,
+  .reviews-grid,
+  .contact-grid{grid-template-columns:minmax(0,1fr);min-width:0}
+  .services-pricing,.reviews-intro,.reviews-cards,.contact-copy,.section-heading-col{min-width:0;max-width:100%}
+  .section-heading-col h2 br{display:initial}
+  .section-heading-col h2{overflow-wrap:normal}
+}
+@media (max-width:650px){
+  .services-section .wrap.section-inner,
+  .reviews-section .wrap.section-inner,
+  .contact-section .wrap.section-inner{
+    width:calc(100% - 36px);
+    max-width:none;
+  }
+  .services-section .section-top,
+  .reviews-section .section-top,
+  .contact-section .section-top{gap:12px;align-items:flex-start}
+  .services-layout{gap:24px;margin-top:26px}
+  .section-heading-col h2{font-size:clamp(38px,10.5vw,48px);line-height:1.12}
+  .section-heading-col p{max-width:34ch}
+  .service-tabs{display:flex;flex-wrap:wrap;overflow:visible;white-space:normal;gap:8px;margin-bottom:18px}
+  .service-tab{font-size:11px;min-height:38px;padding:9px 12px;flex:0 0 auto}
+  .services-pricing .service-item{grid-template-columns:16px minmax(0,1fr) auto;gap:10px}
+  .services-pricing .service-info h3{font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+  .services-pricing .service-price{font-size:12px}
+  .reviews-grid{gap:25px;margin-top:28px}
+  .reviews-intro h2{font-size:clamp(39px,10vw,50px);line-height:1.16;margin:0;max-width:100%}
+  .reviews-intro h2 em{display:inline}
+  .review-rating{margin:20px 0 20px;gap:13px}
+  .rating-big{font-size:58px}
+  .quote-card{padding:25px 23px;max-width:100%;min-width:0}
+  .quote-card p{font-size:clamp(20px,5.4vw,25px);line-height:1.42;overflow-wrap:break-word}
+  .review-point{max-width:100%;min-width:0}
+  .contact-grid{gap:28px}
+}
