@@ -228,3 +228,8 @@
   .hero-photo-wrap .award-sticker svg{display:none}
   .hero-caption{padding-left:0}
 }
+
+/* Keep the entire award badge INSIDE the photo at every screen width. */
+.hero-photo-wrap .award-sticker{left:18px;bottom:18px}
+@media(min-width:901px){.hero-photo-wrap .award-sticker{left:20px;bottom:22px}}
+@media(max-width:650px){.hero-photo-wrap .award-sticker{left:12px;bottom:12px}}
